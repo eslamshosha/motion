@@ -438,7 +438,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 30px;
+  padding: 15px 0;
   transition: all 0.3s ease-in-out;
 }
 
@@ -660,7 +660,7 @@ html[dir=rtl] .fixed-search {
     max-width: 48px;
   }
   .nav-header {
-    padding: 10px 20px;
+    padding: 10px 0;
   }
   .show-icons .lang-ancor {
     display: none;
@@ -1933,7 +1933,7 @@ html[dir=rtl] .footer-accordion.active:after {
   }
 }
 
-.progressbar li::after {
+.progressbar li::before {
   content: "";
   width: 100%;
   height: 4px;
@@ -1942,11 +1942,11 @@ html[dir=rtl] .footer-accordion.active:after {
   transition: all 0.3s ease-in-out;
 }
 
-.progressbar li:last-of-type {
+.progressbar li:first-of-type {
   flex: 0;
 }
 
-.progressbar li:last-of-type::after {
+.progressbar li:first-of-type::before {
   display: none;
 }
 
@@ -1955,7 +1955,7 @@ html[dir=rtl] .footer-accordion.active:after {
   background-color: var(--white-color);
 }
 
-.progressbar li.active::after {
+.progressbar li.active::before {
   background-color: var(--white-color);
 }
 

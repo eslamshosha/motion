@@ -164,15 +164,13 @@ $(document).ready(function () {
     }
     countdown();
   }
-  const selectExists =
-    document.getElementsByClassName("phone").length > 0;
+  const selectExists = document.getElementsByClassName("phone").length > 0;
   if (selectExists) {
     const phoneInputField = document.querySelector("#phone");
-   const phoneInput = window.intlTelInput(phoneInputField, {
-     utilsScript:
-       "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
-   });
-
+    const phoneInput = window.intlTelInput(phoneInputField, {
+      utilsScript:
+        "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+    });
   }
   ///////// ** main** /////////
   var specials = new Swiper(".main-slider .swiper-container", {
@@ -238,18 +236,9 @@ function activeStep(ele, stepId) {
     $(activeStep).addClass("active");
     $(activelast).addClass("active");
   } else {
-    var activeHead = stepId - 1;
+    var activeHead = stepId;
     var activeStep = "#activeStep-" + activeHead;
     $(activeStep).addClass("active");
-  }
-}
-function showPass(showPass) {
-  sibling = showPass.parentElement.nextElementSibling;
-  // sibling.focus();
-  if (showPass.checked) {
-    sibling.setAttribute("type", "text");
-  } else {
-    sibling.setAttribute("type", "password");
   }
 }
 //lazy load
