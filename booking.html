@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>motion</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="images/favicon/site.webmanifest" />
+    <link rel="stylesheet" href="css/line-awesome.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.rtl.min.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/swiper.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+
+  <body>
+    <!-- preloader -->
+    <div class="preloader">
+      <div class="progress">
+        <div class="progress-bar"></div>
+      </div>
+    </div>
+    <!-- preloader -->
+    <!-- header section -->
+    <header>
+      <div class="top-header">
+        <div class="nav-header">
+          <figure class="img-logo">
+            <a href="index.html"
+              ><img
+                src="images/DD-Assets/white-logo.png"
+                class="img-fluid"
+                alt="logo"
+              />
+            </a>
+          </figure>
+          <div class="navgition">
+            <div class="nav-head">
+              <a href="index.html" class="lang-ancor"> English</a>
+              <button class="close-menu">
+                <i class="las la-times"></i>
+              </button>
+            </div>
+            <ul class="big-menu list-unstyled">
+              <li>
+                <a href="index.html"> الرئيسية</a>
+              </li>
+              <li>
+                <a href="category.html"> المناسبات</a>
+              </li>
+              <li>
+                <a href="#"> من نحن</a>
+              </li>
+              <li>
+                <a href="#"> الشروط والأحكام</a>
+              </li>
+
+              <li>
+                <a href="#"> تواصل معنا</a>
+              </li>
+            </ul>
+          </div>
+          <div class="header-cont">
+            <div class="show-icons">
+              <div class="header-icons">
+                <a href="cart.html" class="add-to d-none">
+                  <i class="las la-shopping-cart"></i>
+                  <span class="counter">0</span>
+                </a>
+                <div class="dropdown cat-anchor d-none">
+                  <div class="add-to">
+                    <div class="user-cont">
+                      <i class="las la-user"></i>
+                    </div>
+                    <div class="dropdown-content">
+                      <a class="cat-drop" href="login.html">تسجيل الدخول</a>
+                      <a class="cat-drop" href="registeration.html"
+                        >حساب جديد</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <button class="menu-bars" id="menu-id">
+                  <i class="las la-bars"></i>
+                </button>
+                <a href="index-en.html" class="lang-ancor none"> English</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- header section     -->
+    <!-- breadcrumb section -->
+    <section class="breadcrumb-sec">
+      <div class="container">
+        <ol class="breadcrumb">
+          <li class="item-home">
+            <a class="bread-link bread-home" href="index.html">الرئيسية </a>
+          </li>
+          <li class="">
+            <a class="bread-link" href="products.html">المناسبات </a>
+          </li>
+          <li class="">
+            <a class="bread-link" href="product-details.html"
+              >مؤتمر تاريخ وتطور الذكاء الاصطناعي
+            </a>
+          </li>
+          <li class="active item-23">
+            <span class="bread-current">حجز </span>
+          </li>
+        </ol>
+      </div>
+    </section>
+    <!-- breadcrumb section -->
+    <!-- category-section -->
+    <section class="single-page">
+      <div class="container">
+        <div class="booking-header">
+          <div class="booking-top-head">
+            <div class="booking-info">
+              <p class="product-info">
+                <i class="las la-calendar-alt"></i
+                ><span>الثلاثاء 21 يناير 2025 - 08:00 صباحاً</span>
+              </p>
+              <p class="product-info">
+                <i class="las la-map-marker-alt"></i
+                ><span>الجابرية - اسم القاعة</span>
+              </p>
+              <p class="product-info">
+                <img src="images/ticket.png" alt="icon" /><span>2</span>
+              </p>
+              <p class="product-price">14.000 دك</p>
+            </div>
+            <div class="product-time">sec<span>02:59</span></div>
+          </div>
+          <div class="wizard-header">
+            <div class="steps">
+              <div class="steps-progress">
+                <ul class="progressbar list-unstyled wizard-step">
+                  <li class="" id="activeStep-1">
+                    <div class="step-info">
+                      <span class="stepnumber">1</span>
+                      <span class="step-name">اختيار المقاعد</span>
+                    </div>
+                  </li>
+                  <li id="activeStep-2">
+                    <div class="step-info">
+                      <span class="stepnumber">2</span>
+                      <span class="step-name">بيانات العميل</span>
+                    </div>
+                  </li>
+                  <li class="d-none" id="activeStep-3">
+                    <div class="step-info">
+                      <span class="stepnumber">2.5</span>
+                      <span class="step-name">رساله التاكيد</span>
+                    </div>
+                  </li>
+                  <li id="activeStep-4">
+                    <div class="step-info">
+                      <span class="stepnumber">3</span>
+                      <span class="step-name">الشروط والأحكام</span>
+                    </div>
+                  </li>
+                  <li id="activeStep-5">
+                    <div class="step-info">
+                      <span class="stepnumber">4</span>
+                      <span class="step-name">الدفع</span>
+                    </div>
+                  </li>
+                  <li id="activeStep-6">
+                    <div class="step-info">
+                      <span class="stepnumber">5</span>
+                      <span class="step-name">عرض التذكرة</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="wizard card-like">
+          <form>
+            <div class="wizard-body">
+              <div class="step initial active" id="step_1">
+                <div class="booking-tickets-cont">
+                  <div class="booking-info">
+                    <div class="booking-info-cont">
+                      <div class="booking-item">
+                        <span>A - B</span>
+                        <div class="booking-name">
+                          <span class="booking-class"
+                            >( درجة رجال الأعمال )</span
+                          ><span>12,000 دك </span>
+                        </div>
+                      </div>
+                      <div class="booking-item">
+                        <span>C - D - E - F - G </span>
+                        <div class="booking-name">
+                          <span class="booking-class">( الدرجة المميزة )</span
+                          ><span>8,000 دك </span>
+                        </div>
+                      </div>
+                      <div class="booking-item">
+                        <span>H - I - J</span>
+                        <div class="booking-name">
+                          <span class="booking-class"
+                            >( الدرجة الاقتصادية )</span
+                          ><span>7,000 دك </span>
+                        </div>
+                      </div>
+                      <div class="booking-seats-types">
+                        <div class="booking-type">
+                          <img src="images/seat-3.png" alt="chair" />
+                          <span>مقاعدي المختارة</span>
+                        </div>
+                        <div class="booking-type">
+                          <img src="images/seat-2.png" alt="chair" />
+                          <span>المقاعد الخالية</span>
+                        </div>
+                        <div class="booking-type">
+                          <img src="images/seat-1.png" alt="chair" />
+                          <span>المقاعد المحجوزة</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="booking-seats">
+                    <div class="booking-seats-header">
+                      <span class="screen-title">الشاشة</span>
+                      <img src="images/Screen.svg" alt="screen" />
+                    </div>
+                  </div>
+                </div>
+                <div class="wizard-btn-cont">
+                  <button
+                    type="button"
+                    class="btn btn-irv first-btn"
+                    onclick="activeStep($(this), 2)"
+                  >
+                    التالي
+                  </button>
+                </div>
+              </div>
+              <div class="step" id="step_2">
+                <div class="group-input">
+                  <div class="form-group">
+                    <label class="form-label"> الاسم</label>
+                    <input
+                      type="text"
+                      class="form-input"
+                      placeholder="ادخل الاسم"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label"> البريد الالكتروني</label>
+                    <input
+                      type="email"
+                      class="form-input"
+                      placeholder="البريد الالكتروني"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label"> رقم الهاتف</label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      class="form-input phone"
+                      placeholder="ادخل رقم الهاتف"
+                    />
+                  </div>
+                </div>
+                <div class="wizard-btn-cont">
+                  <button
+                    type="button"
+                    class="btn btn-irv btn-irv-default second-btn"
+                    onclick="activeStep($(this), 1)"
+                  >
+                    السابق
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-irv first-btn"
+                    onclick="activeStep($(this), 3)"
+                  >
+                    ارسل كود التفعيل
+                  </button>
+                </div>
+              </div>
+              <div class="step" id="step_3">
+                <div class="otp-cont">
+                  <p class="verification-text">ادخل رقم الكود المرسل</p>
+                  <div class="verification-num">
+                    <span>965 54554789 </span>
+                  </div>
+                  <form action="" class="login-form">
+                    <div class="form-cont">
+                      <div class="form-group digit-group otp-form">
+                        <input
+                          type="text"
+                          name="opt-field[]"
+                          class="otp-field"
+                          maxlength="1"
+                        />
+                        <input
+                          type="text"
+                          name="opt-field[]"
+                          class="otp-field"
+                          maxlength="1"
+                        />
+                        <input
+                          type="text"
+                          name="opt-field[]"
+                          class="otp-field"
+                          maxlength="1"
+                        />
+                        <input
+                          type="text"
+                          name="opt-field[]"
+                          class="otp-field"
+                          maxlength="1"
+                        />
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="wizard-btn-cont">
+                  <button
+                    type="button"
+                    class="btn btn-irv btn-irv-default second-btn"
+                    onclick="activeStep($(this), 2)"
+                  >
+                    السابق
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-irv first-btn"
+                    onclick="activeStep($(this), 4)"
+                  >
+                    التالي
+                  </button>
+                </div>
+              </div>
+              <div class="step" id="step_4">
+                <div class="terms-cont">
+                  <p>
+                    شروط وأحكام شركة "Motion Group" لحجز تذاكر الفعاليات: تعريف
+                    الشركة: 1.1 شركة "Motion Group" هي شركة متخصصة في حجز تذاكر
+                    الفعاليات والأحداث. الحجز والتذاكر: 2.1 يتم إجراء عمليات
+                    الحجز عبر منصة الشركة الإلكترونية. 2.2 يلتزم العميل بتقديم
+                    معلومات صحيحة وكاملة أثناء عملية الحجز. 2.3 تعتبر التذاكر
+                    ملكية للعميل بمجرد استلام تأكيد الحجز. 2.4 التذاكر المباعة
+                    لا ترد ولا تستبدل وفقاً للشروط والأحكام. 2.5 يرجي الحضور قبل
+                    موعد الحفل بـ 60 دقيقة. 2.6 لا يسمح بدخول المشروبات
+                    والمأكولات إلى قاعة الحفل. 2.7 التذاكر المباعة خارج الموقع
+                    تعتبر لاغية. التسعير والدفع: 4.1 تظهر أسعار التذاكر على
+                    الموقع بالعملة المحلية وتشمل الضرائب والرسوم. 4.2 يتم قبول
+                    وسائل الدفع المتاحة على الموقع. المسؤولية: 6.1 تقدم شركة
+                    "Motion Group" تذاكر للفعاليات المعتمدة فقط. حقوق الملكية
+                    الفكرية: 7.1 يُمنح العميل حق استخدام التذاكر للدخول الشخصي
+                    فقط ولا يجوز نسخها أو بيعها. شكرًا لاختياركم شركة "Motion
+                    Group". نتطلع إلى خدمتكم بأفضل ما لدينا في تجربة حجز التذاكر
+                    والمشاركة في الفعاليات. مع خالص التحية،فريق شركة Motion
+                    Group
+                  </p>
+                  <div class="agree">
+                    <label class="custom-checkbox">
+                      <input type="checkbox" />
+                      <span class="check-mark"
+                        ><i class="las la-check"></i
+                      ></span>
+                    </label>
+                    <span class="text"> أوافق على الشروط والأحكام </span>
+                  </div>
+                </div>
+                <div class="wizard-btn-cont">
+                  <button
+                    type="button"
+                    class="btn btn-irv btn-irv-default second-btn"
+                    onclick="activeStep($(this), 3)"
+                  >
+                    السابق
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-irv first-btn"
+                    onclick="activeStep($(this), 5)"
+                  >
+                    التالي
+                  </button>
+                </div>
+              </div>
+              <div class="step" id="step_5">
+                <div class="payment-cont">
+                  <h3 class="payment-title">بوابة الدفع</h3>
+                </div>
+                <div class="wizard-btn-cont">
+                  <button
+                    type="button"
+                    class="btn btn-irv btn-irv-default second-btn"
+                    onclick="activeStep($(this), 4)"
+                  >
+                    السابق
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-irv first-btn"
+                    onclick="activeStep($(this), 6)"
+                  >
+                    التالي
+                  </button>
+                </div>
+              </div>
+              <div class="step" id="step_6">
+                <div class="ticket-show">
+                  <h4 class="ticket-show-head">تذاكري</h4>
+                  <div class="ticket-show-items">
+                    <div class="ticket-card">
+                      <figure class="card-img">
+                        <img src="images/item1.png" alt="ticket" />
+                      </figure>
+                      <div class="ticket-info">
+                        <h3 class="ticket-name">
+                          مؤتمر تاريخ وتطور الذكاء الاصطناعي
+                        </h3>
+                        <p class="product-info">
+                          <i class="las la-calendar-alt"></i
+                          ><span>الثلاثاء 21 يناير 2025 - 08:00 صباحاً</span>
+                        </p>
+                        <div class="seats-booked">
+                          <img src="images/seat-3.png" alt="seat" />
+                          <span>j3</span>
+                        </div>
+                      </div>
+                      <div class="ticket-border">
+                        <img src="images/border.svg" alt="border" />
+                      </div>
+                      <div class="ticket-qr">
+                        <div class="ticket-num">رقم التذكرة : 544656543</div>
+                        <figure><img src="images/qr.png" alt="qr" /></figure>
+                        <button type="button" class="ticket-download">
+                          تحميل نسخة PDF
+                          <img src="images/download-icon.png" alt="icon" />
+                        </button>
+                      </div>
+                    </div>
+                    <div class="ticket-card">
+                      <figure class="card-img">
+                        <img src="images/item1.png" alt="ticket" />
+                      </figure>
+                      <div class="ticket-info">
+                        <h3 class="ticket-name">
+                          مؤتمر تاريخ وتطور الذكاء الاصطناعي
+                        </h3>
+                        <p class="product-info">
+                          <i class="las la-calendar-alt"></i
+                          ><span>الثلاثاء 21 يناير 2025 - 08:00 صباحاً</span>
+                        </p>
+                        <div class="seats-booked">
+                          <img src="images/seat-3.png" alt="seat" />
+                          <span>j3</span>
+                        </div>
+                      </div>
+                      <div class="ticket-border">
+                        <img src="images/border.svg" alt="border" />
+                      </div>
+                      <div class="ticket-qr">
+                        <div class="ticket-num">رقم التذكرة : 544656543</div>
+                        <figure><img src="images/qr.png" alt="qr" /></figure>
+                        <button type="button" class="ticket-download">
+                          تحميل نسخة PDF
+                          <img src="images/download-icon.png" alt="icon" />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- category-section -->
+    <!-- footer section -->
+    <footer>
+      <div class="container">
+        <div class="footer-cont">
+          <div class="row">
+            <div class="col-md-4 col-xs-12">
+              <div class="footer-info">
+                <figure class="img-logo">
+                  <a href="index.html"
+                    ><img
+                      src="images/DD-Assets/white-logo.png"
+                      class="img-fluid"
+                      alt="img-logo"
+                  /></a>
+                </figure>
+                <p class="footer-right">Motion Group موشن قروب 2023 ©</p>
+                <div class="social">
+                  <a href="#" class="social-link">
+                    <i class="lab la-instagram"></i>
+                  </a>
+                  <a href="#" class="social-link">
+                    <i class="lab la-twitter"></i>
+                  </a>
+                  <a href="#" class="social-link">
+                    <i class="lab la-facebook-f"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-xs-12">
+              <div class="nav-foot-cont">
+                <h2 class="nav-foot-header foot-header">روابط سريعة</h2>
+                <ul class="nav-foot list-unstyled">
+                  <li class="nav-foot-li">
+                    <a href="#" class="nav-foot-link">المناسبات</a>
+                  </li>
+                  <li class="nav-foot-li">
+                    <a href="#" class="nav-foot-link">من نحن</a>
+                  </li>
+                  <li class="nav-foot-li">
+                    <a href="#" class="nav-foot-link">الشروط والأحكام</a>
+                  </li>
+                  <li class="nav-foot-li">
+                    <a href="#" class="nav-foot-link">تواصل معنا</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-4 col-xs-12">
+              <div class="nav-foot-cont">
+                <h2 class="nav-foot-header foot-header">معلومات التواصل</h2>
+                <div class="nav-foot">
+                  <ul class="list-unstyled">
+                    <li class="nav-foot-li">
+                      <div class="contact-box">
+                        <i class="las la-home"></i>
+                        <span>الكويت</span>
+                      </div>
+                    </li>
+                    <li class="nav-foot-li">
+                      <a href="mailto:blabla.com" class="contact-box">
+                        <i class="las la-envelope"></i>
+                        <span> info@motiongroupkwt.com </span>
+                      </a>
+                    </li>
+                  </ul>
+                  <div class="social">
+                    <a href="#" class="social-link">
+                      <i class="lab la-instagram"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                      <i class="lab la-twitter"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                      <i class="lab la-facebook-f"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="copy-name" style="color: white">
+            <span>Powered by</span>
+            <a href="https://raiyansoft.com/"
+              >Raiyansoft
+              <span>®</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer section -->
+    <!-- arrow to top -->
+    <button class="arrow-top">
+      <i class="las la-arrow-up"></i>
+    </button>
+    <!-- arrow to top -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
