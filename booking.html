@@ -33,6 +33,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/seatchart@0.1.0/dist/seatchart.min.css"
+    />
     <link rel="stylesheet" href="css/main.css" />
   </head>
 
@@ -210,54 +214,8 @@
           <form>
             <div class="wizard-body">
               <div class="step initial active" id="step_1">
-                <div class="booking-tickets-cont">
-                  <div class="booking-info">
-                    <div class="booking-info-cont">
-                      <div class="booking-item">
-                        <span>A - B</span>
-                        <div class="booking-name">
-                          <span class="booking-class"
-                            >( درجة رجال الأعمال )</span
-                          ><span>12,000 دك </span>
-                        </div>
-                      </div>
-                      <div class="booking-item">
-                        <span>C - D - E - F - G </span>
-                        <div class="booking-name">
-                          <span class="booking-class">( الدرجة المميزة )</span
-                          ><span>8,000 دك </span>
-                        </div>
-                      </div>
-                      <div class="booking-item">
-                        <span>H - I - J</span>
-                        <div class="booking-name">
-                          <span class="booking-class"
-                            >( الدرجة الاقتصادية )</span
-                          ><span>7,000 دك </span>
-                        </div>
-                      </div>
-                      <div class="booking-seats-types">
-                        <div class="booking-type">
-                          <img src="images/seat-3.png" alt="chair" />
-                          <span>مقاعدي المختارة</span>
-                        </div>
-                        <div class="booking-type">
-                          <img src="images/seat-2.png" alt="chair" />
-                          <span>المقاعد الخالية</span>
-                        </div>
-                        <div class="booking-type">
-                          <img src="images/seat-1.png" alt="chair" />
-                          <span>المقاعد المحجوزة</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="booking-seats">
-                    <div class="booking-seats-header">
-                      <span class="screen-title">الشاشة</span>
-                      <img src="images/Screen.svg" alt="screen" />
-                    </div>
-                  </div>
+                <div class="booking-seats">
+                  <div id="seat"></div>
                 </div>
                 <div class="wizard-btn-cont">
                   <button
@@ -606,11 +564,79 @@
       <i class="las la-arrow-up"></i>
     </button>
     <!-- arrow to top -->
+
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/wow.min.js"></script>
     <script src="js/swiper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/seatchart@0.1.0/dist/seatchart.min.js"></script>
     <script src="js/script.js"></script>
+
+    <!-- seatchart js for booking seats -->
+    <script>
+      var options = {
+        map: {
+          rows: 10,
+          columns: 10,
+          seatTypes: {
+            default: {
+              label: "الدرجة المميزة",
+              cssClass: "economy",
+              price: 8.0,
+            },
+            first: {
+              label: "درجة رجال الأعمال",
+              cssClass: "first-class",
+              price: 12.0,
+              seatRows: [0, 1, 2],
+            },
+            reduced: {
+              label: "الدرجة الاقتصادية",
+              cssClass: "reduced",
+              price: 7.0,
+              seatRows: [7, 8, 9],
+            },
+            // reservedSeats: {
+            //   label: "المقاعد المحجوزة",
+            //   cssClass: "sc-seat-reserved",
+            //   price: 0,
+            // }
+          },
+          disabledSeats: [
+            { row: 0, col: 0 },
+            { row: 0, col: 9 },
+          ],
+          reservedSeats: [
+            { row: 0, col: 3 },
+            { row: 0, col: 4 },
+          ],
+          selectedSeats: [
+            { row: 0, col: 5 },
+            { row: 0, col: 6 },
+          ],
+          rowSpacers: [3, 7],
+          columnSpacers: [5],
+        },
+        cart: { currency: "دك", submitLabel: "المجموع", visible: true },
+      };
+      var element = document.getElementById("seat");
+      var sc = new Seatchart(element, options);
+      sc.addEventListener("submit", function handleSubmit(e) {
+        alert("المجموع: " + e.total + "دك");
+      });
+    </script>
+    <!-- seatchart js for booking seats -->
+    <script>
+      // `seatParent` is the element you want to wrap
+      var seatParent = document.querySelector(".sc-map");
+      var parent = seatParent.parentNode;
+      var wrapper = document.createElement("div");
+
+      // set the wrapper as child (instead of the seatParent)
+      parent.replaceChild(wrapper, seatParent);
+      // set seatParent as child of wrapper
+      wrapper.appendChild(seatParent);
+    </script>
   </body>
 </html>

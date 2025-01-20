@@ -225,7 +225,7 @@ function activeStep(ele, stepId) {
   $(".step").not(nextStep).hide();
   $(nextStep).show();
   if ($(ele).hasClass("btn-irv-default")) {
-    var activeHead = stepId;
+    var activeHead = stepId + 1;
     var activeStep = "#activeStep-" + activeHead;
     $(activeStep).removeClass("active");
   } else if (stepId == 6) {
