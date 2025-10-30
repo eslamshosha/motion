@@ -122,7 +122,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 0;
+  padding: 15px 30px;
   transition: all 0.3s ease-in-out;
 }
 .big-menu > li a {
@@ -324,7 +324,7 @@ html[dir="rtl"] .fixed-search {
     max-width: 48px;
   }
   .nav-header {
-    padding: 10px 0;
+    padding: 10px 20px;
   }
   .show-icons .lang-ancor {
     display: none;

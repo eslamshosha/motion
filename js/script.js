@@ -216,6 +216,30 @@ $(document).ready(function () {
       },
     },
   });
+  var related = new Swiper(".store-slider .swiper-container", {
+    // loop: true,
+    autoplay: true,
+    slidesPerView: 4.5,
+    spaceBetween: 10,
+    breakpoints: {
+      0: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+      },
+      767: {
+        slidesPerView: 3,
+        spaceBetween: 10,
+      },
+      992: {
+        slidesPerView: 5,
+        spaceBetween: 10,
+      },
+      1199: {
+        slidesPerView: 7,
+        spaceBetween: 10,
+      },
+    },
+  });
 
   lazyLoad();
 });
@@ -275,3 +299,7 @@ function preloadImage(img) {
     // img.parentElement.parentElement.classList.add("lazy-head-img");
   };
 }
+$(".btn-addToCart").click(function () {
+  $(this).siblings(".item-qty").slideDown(400);
+  $(this).hide();
+});
