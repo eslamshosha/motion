@@ -3,7 +3,7 @@
   display: grid;
   grid-template-columns: 1fr 3fr;
   gap: 22px;
-  padding-top: 130px;
+  padding-top: 70px;
   @include max-991 {
     padding-top: 0;
   }

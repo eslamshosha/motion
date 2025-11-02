@@ -164,13 +164,19 @@ $(document).ready(function () {
     }
     countdown();
   }
-  const selectExists = document.getElementsByClassName("phone").length > 0;
-  if (selectExists) {
+  const phoneExists = document.getElementsByClassName("phone").length > 0;
+  if (phoneExists) {
     const phoneInputField = document.querySelector("#phone");
     const phoneInput = window.intlTelInput(phoneInputField, {
       utilsScript:
         "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
     });
+  }
+  const selectExists =
+    document.getElementsByClassName("select_input").length > 0;
+  if (selectExists) {
+    const $select2 = $(".select_input");
+    $select2.select2();
   }
   ///////// ** main** /////////
   var specials = new Swiper(".main-slider .swiper-container", {

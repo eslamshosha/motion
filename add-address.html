@@ -121,8 +121,11 @@
           <li class="item-home">
             <a class="bread-link bread-home" href="index.html">الرئيسية </a>
           </li>
+          <li>
+            <a class="bread-link" href="address.html">العناوين المحفوظة </a>
+          </li>
           <li class="active">
-            <span class="bread-current"> حسابي</span>
+            <span class="bread-current"> إضافة عنوان جديد</span>
           </li>
         </ol>
       </div>
@@ -141,7 +144,7 @@
               </figure>
               <ul class="account-list">
                 <li>
-                  <a href="account.html" class="account-ancor active">
+                  <a href="account.html" class="account-ancor">
                     <i class="las la-user"></i>
                     <span>حسابي</span>
                   </a>
@@ -165,7 +168,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="address.html" class="account-ancor">
+                  <a href="address.html" class="account-ancor active">
                     <i class="las la-home"></i>
                     <span>العناوين المحفوظة</span>
                   </a>
@@ -180,92 +183,84 @@
             </div>
           </div>
           <div class="account-content">
-            <div class="account-details">
-              <div class="account-card">
-                <div class="product-img-cont">
-                  <figure>
-                    <img src="images/item1.png" alt="product-img" />
-                  </figure>
+            <form action="" class="address-form">
+              <div class="address-form-cont">
+                <div class="form-group">
+                  <label class="form-label">الموقع</label>
+                  <button class="form-input" type="button">حدد الموقع</button>
                 </div>
-                <h2 class="product-head">مؤتمر تاريخ وتطور الذكاء الاصطناعي</h2>
-                <p class="product-info">
-                  <i class="las la-calendar-alt"></i
-                  ><span>الثلاثاء 21 يناير 2025 - 08:00 صباحاً</span>
-                </p>
-                <p class="product-info">
-                  <i class="las la-map-marker-alt"></i
-                  ><span>الجابرية - اسم القاعة</span>
-                </p>
-                <div class="locatiom-map">
-                  <img src="images/map-img.jpg" alt="map" />
+                <div class="form-group">
+                  <label class="form-label">اسم العنوان</label>
+                  <input
+                    type="text"
+                    class="form-input"
+                    placeholder="اكتب اسم العنوان"
+                  />
                 </div>
-              </div>
-              <div class="details-box">
-                <div class="book-info">
-                  <h5 class="book-head">تفاصيل الحجز</h5>
-                  <div class="book-price">60.000 د.ك</div>
-                  <div class="book-message">
-                    تم دفع مقدم 30.000 د.ك في 10 ابريل 2025
+                <div class="form-group">
+                  <label class="form-label"> رقم الهاتف</label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    class="form-input phone"
+                    placeholder="ادخل رقم الهاتف"
+                  />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">المحافظة</label>
+                  <div class="form-input-relative">
+                    <i class="fa-solid fa-caret-down angle-select"></i>
+                    <select class="select_input" name="city">
+                      <option disabled selected hidden>اختر المحافظة</option>
+                      <option value="one">1</option>
+                      <option value="two">2</option>
+                    </select>
                   </div>
                 </div>
-                <span class="list-head">شاملة : </span>
-                <ul class="details-list">
-                  <li>المصاريف الادارية</li>
-                  <li>بالطو التخرج</li>
-                  <li>شهادة تقدير</li>
-                  <li>تذكرتين للمرافقين</li>
-                </ul>
-                <button
-                  class="submit-btn"
-                  data-bs-toggle="modal"
-                  data-bs-target="#payModal"
-                >
-                  دفع الرسوم
-                </button>
+                <div class="form-group">
+                  <label class="form-label">المنطقة</label>
+                  <div class="form-input-relative">
+                    <i class="fa-solid fa-caret-down angle-select"></i>
+                    <select class="select_input" name="city">
+                      <option disabled selected hidden>اختر المنطقة</option>
+                      <option value="one">1</option>
+                      <option value="two">2</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">اسم الشارع</label>
+                  <input
+                    type="text"
+                    class="form-input"
+                    placeholder="اكتب اسم الشارع"
+                  />
+                </div>
+                <div class="form-group">
+                  <label class="form-label"> رقم المنزل / النباية</label>
+                  <input
+                    type="number"
+                    class="form-input"
+                    placeholder="اكتب رقم المنزل / النباية"
+                  />
+                </div>
+                <div class="form-group">
+                  <label class="form-label"> رقم الشقة</label>
+                  <input
+                    type="number"
+                    class="form-input"
+                    placeholder="اكتب رقم الشقة"
+                  />
+                </div>
               </div>
-            </div>
+              <div class="form-btn-cont">
+                <button class="submit-btn custom" type="submit">حفظ</button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
     </section>
-    <!-- pay modal -->
-    <div
-      class="modal fade"
-      id="payModal"
-      tabindex="-1"
-      aria-labelledby="payModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-body pay-body">
-            <h6 class="pay-head">رسوم الحجز</h6>
-            <span class="pay-price">60.000 د.ك</span>
-            <button class="submit-btn">دفع المبلغ كامل</button>
-            <button class="submit-btn">دفع مقدم 30.000 د.ك</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div
-      class="modal fade"
-      id="exampleModal"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-body pay-body">
-            <div class="success-message">
-              <i class="fa-solid fa-circle-check"></i>
-              <span>تم الدفع بنجاح</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
     <!-- user-section -->
     <!-- footer section -->
     <footer>
